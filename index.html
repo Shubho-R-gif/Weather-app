@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./assets/treeimg.jpg" type="image/x-icon" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Weather Forecast</h1>
+    <div class="container">
+      <input id="screen" type="text" placeholder="Enter a city name" />
+      <button id="searchBtn" type="button">🔍</button>
+      <div class="dailyCast">
+        <p id="temperature"></p>
+        <span> </span>
+      </div>
+      <div class="location">
+        <span class="WheatherIcon" >🌩️</span>
+        <h2><br /></h2>
+      </div>
+      <div class="aqi">
+        <p>Air Quality</p>
+        <h5
+          style="
+            font-size: 18px;
+            font-family: sans-serif;
+            margin: 0;
+            margin-top: 10px;
+          "
+        ></h5>
+        <br />
+        <span
+          id="description"
+          style="
+            font-family: sans-serif;
+            font-size: 14px;
+            display: flex;
+            margin-top: -10px;
+          "
+        >
+        </span>
+      </div>
+      <div class="dailyCastIndex">
+        <h2></h2>
+        <h3></h3>
+        <h4></h4>
+      </div>
+      <div class="dailyCastIndex">
+        <h5></h5>
+        <span ></span>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

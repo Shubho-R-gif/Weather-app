@@ -1,0 +1,222 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background: url(./assets/blurlights.jpg) center fixed no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  background-attachment: fixed;
+  box-sizing: border-box;
+/*   overflow: hidden; */
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: weatherForecast 1.5s ease-in-out 1;
+}
+
+.container {
+  border: none;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  margin: 20px 0;
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.container input {
+  width: 80%;
+  margin: 15px 0;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+  animation: inputField 1.5s ease-in-out 1;
+}
+
+.container input:focus {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container button {
+  position: relative;
+  height: 50px;
+  width: 160px;
+  border: none;
+  border-radius: 50px;
+  background: teal;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin: 20px 0;
+}
+
+.container button:hover {
+  background: linear-gradient(45deg, #0d3550, #4e9fce);
+  transform: translateY(-5px);
+}
+
+.container button:active {
+  transform: translateY(2px);
+}
+
+.dailyCast {
+  margin-top: 20px;
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.dailyCast p {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+}
+
+.location {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.location .WeatherIcon {
+  font-size: 5rem;
+  margin: 20px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.location h2 {
+  margin-top: 10px;
+  font-size: 2rem;
+}
+
+.aqi {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  margin: 20px 0;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+.aqi p {
+  margin: 10px 0;
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+}
+
+.dailyCastIndex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.dailyCastIndex h2,
+.dailyCastIndex h3,
+.dailyCastIndex h4,
+.dailyCastIndex h5 {
+  margin: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  flex: 1 1 calc(30% - 20px);
+  max-width: 30%;
+  transition: all 0.3s ease;
+}
+
+.dailyCastIndex h2:hover,
+.dailyCastIndex h3:hover,
+.dailyCastIndex h4:hover,
+.dailyCastIndex h5:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.dailyCastIndex span {
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  flex: 1 1 calc(30% - 20px);
+  max-width: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.dailyCastIndex span:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+@keyframes weatherForecast {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes inputField {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
