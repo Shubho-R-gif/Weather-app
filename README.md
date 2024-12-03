@@ -18,3 +18,6 @@ The **Weather App** provides real-time updates for any location. Users can view 
 - **JavaScript**
 - **Accu Weather API** 
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
